@@ -10,7 +10,7 @@ export const PizzaProvider = ({ children }) => {
   useEffect(() => {
     const fetchPizzas = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/pizzas');
+        const response = await fetch('https://backend-pizzas-qa4r.onrender.com/api/pizzas');
         if (!response.ok) {throw new Error('Error al obtener las pizzas');}
         const data = await response.json();
         setPizzas(data);} 
